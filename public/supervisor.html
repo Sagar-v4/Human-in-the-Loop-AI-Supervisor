@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Supervisor Dashboard</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>AI Supervisor Dashboard</h1>
+
+    <div class="container">
+      <h2>Pending Help Requests</h2>
+      <div id="pending-requests">Loading...</div>
+    </div>
+
+    <div class="container">
+      <h2>Request History</h2>
+      <button onclick="fetchHistory()">Refresh History</button>
+      <div id="request-history">Loading...</div>
+    </div>
+
+    <div class="container">
+      <h2>Learned Answers</h2>
+      <button onclick="fetchLearnedAnswers()">Refresh Learned Answers</button>
+      <div id="learned-answers">Loading...</div>
+    </div>
+
+    <script src="js/supervisor.js"></script>
+  </body>
+</html>

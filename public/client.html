@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salon AI Voice Assistant</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        font-family: sans-serif;
+      }
+      .controls button {
+        padding: 15px 25px;
+        font-size: 1.1em;
+        margin: 10px;
+        cursor: pointer;
+        border-radius: 8px;
+        border: none;
+      }
+      #listenButton {
+        background-color: #4caf50;
+        color: white;
+      }
+      #listenButton.listening {
+        background-color: #71a873;
+      }
+      #endSessionButton {
+        background-color: #ff0000;
+        color: white;
+      }
+      #status {
+        margin-top: 20px;
+        font-size: 1.2em;
+        color: #333;
+        min-height: 1.5em;
+      }
+      #clientIdDisplay {
+        font-size: 0.9em;
+        color: #555;
+        margin-bottom: 30px;
+      }
+      #transcriptPreview {
+        font-style: italic;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Salon AI Voice Assistant</h2>
+      <p>Client ID: <span id="clientIdDisplay"></span></p>
+      <div class="controls">
+        <button id="listenButton">Start Speaking</button
+        ><button id="endSessionButton">End Session</button>
+      </div>
+      <p id="status">Initializing...</p>
+      <p id="transcriptPreview"></p>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/livekit-client/dist/livekit-client.umd.min.js"
+      defer
+    ></script>
+    <script src="js/client-app.js" defer></script>
+  </body>
+</html>

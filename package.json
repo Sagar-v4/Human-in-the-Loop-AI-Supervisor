@@ -1,0 +1,29 @@
+{
+  "name": "human-in-the-loop-ai-supervisor",
+  "version": "0.0.1",
+  "description": "Human-in-the-Loop AI Supervisor for customer relationships",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "ai",
+    "human-in-the-loop",
+    "livekit"
+  ],
+  "author": "Sagar Variya",
+  "license": "ISC",
+  "dependencies": {
+    "@roamhq/wrtc": "^0.8.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "livekit-client": "^1.15.7",
+    "livekit-server-sdk": "^2.12.0",
+    "mongoose": "^7.5.0",
+    "twilio": "^4.18.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

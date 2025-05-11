@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salon AI Assistant</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .centered {
+        text-align: center;
+        margin-top: 50px;
+      }
+      button {
+        padding: 15px 30px;
+        font-size: 1.2em;
+        margin: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container centered">
+      <h1>Welcome to the Salon AI Assistant</h1>
+      <button id="adminButton">Admin Dashboard</button>
+      <button id="clientButton">Start Client Session</button>
+    </div>
+    <script>
+      document
+        .getElementById("adminButton")
+        .addEventListener(
+          "click",
+          () => (window.location.href = "/supervisor.html")
+        );
+      document.getElementById("clientButton").addEventListener("click", () => {
+        const mobileNumber = prompt(
+          "Please enter your mobile number (e.g., +15551234567):"
+        );
+        if (mobileNumber && mobileNumber.trim() !== "") {
+          localStorage.setItem("clientMobileNumber", mobileNumber.trim());
+          window.location.href = `/client.html`;
+        } else if (mobileNumber !== null) {
+          alert("Mobile number cannot be empty.");
+        }
+      });
+    </script>
+  </body>
+</html>
